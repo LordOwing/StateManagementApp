@@ -1,14 +1,12 @@
 package com.example.statemanagementapp;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.view.View;
-import androidx.activity.EdgeToEdge;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final String KEY_COUNT = "count";
@@ -26,6 +24,22 @@ public class MainActivity extends AppCompatActivity {
         }
         updateCountText();
 
+        buttonIncrement.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                count++;
+                updateCountText();
+            }
 
+        });
     }
+    @Override
+    protected  void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_COUNT, count);
+    }
+    protected void updateCountText(){
+        textViewCount.setText("Licznik: "+ count);
+    }
+
 }
