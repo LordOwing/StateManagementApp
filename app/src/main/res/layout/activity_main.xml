@@ -13,6 +13,7 @@
         android:text="Licznik: 0"
         android:textSize="24sp"/>
 
+
     <Button
         android:id="@+id/buttonIncrement"
         android:layout_width="wrap_content"
@@ -23,6 +24,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Test"
+        />
+    <CheckBox
+        android:text = "Wyświetl ukryte"
+        android:id = "@+id/buttonCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Switch
+        android:id="@+id/buttonSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motyw aplikacji"
         />
 
 </LinearLayout>
