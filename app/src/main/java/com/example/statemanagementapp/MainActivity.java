@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         textViewCount=findViewById(R.id.textViewCount);
-        CheckView = (findViewById(R.id.buttonCheck)).isChecked();
+       // CheckView = (findViewById(R.id.buttonCheck)).isChecked();
         Button buttonIncrement = findViewById(R.id.buttonIncrement);
         if(savedInstanceState !=null){
             count = savedInstanceState.getInt(KEY_COUNT);
@@ -45,3 +45,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+// comment

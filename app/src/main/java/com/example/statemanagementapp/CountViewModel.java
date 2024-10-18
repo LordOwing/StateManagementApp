@@ -9,4 +9,5 @@ public class CountViewModel extends ViewModel {
     public void incrementCount(){
         count++;
     }
+
 }
